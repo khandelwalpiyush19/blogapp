@@ -47,7 +47,6 @@ export default function User() {
         const resposne= await get("/dashboard/users")
         const data= resposne.data
         setUsers(data.Users)
-        console.log(data)
     } catch (error) {
       console.log(error)
     }

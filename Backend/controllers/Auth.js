@@ -11,7 +11,7 @@ const Register = async (req, res) => {
         // Upload the image to Cloudinary
         const imagePath = req.file.filename;
         // const cloudinaryResult = await FileUploadeToColoudinary(imagePath, 'user_profiles');
-          console.log(imagePath)
+        
         // Create a new user with the uploaded image URL
         const existUser= await UserModal.findOne({email})
         if (existUser) {
@@ -43,7 +43,7 @@ const Register = async (req, res) => {
 const Login = async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log(email, password);
+         
         if (!email || !password) {
             return res.status(400).json({ success: false, message: "All fields are required" });
         }

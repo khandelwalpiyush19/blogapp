@@ -7,21 +7,19 @@ export default function Admin() {
  const [post,setPost]=useState([])
  const [users,setUsers]=useState([])
  const [comments,setComments]=useState([])
-  console.log(post)
   useEffect(()=>{
     const GetData=async()=>{
       try {
         const request= await get('/dashboard')
         const response= request.data
 
-        console.log(response)
         if (request.status===200) {
           setPost(response.Posts)
           setUsers(response.Users)
           setComments(response.comments)
         }
       } catch (error) {
-        console.log(response)
+        console.log(error)
       }
     }
     GetData()

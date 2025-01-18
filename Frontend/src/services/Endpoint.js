@@ -17,7 +17,6 @@ export const patch= (url,data)=> instance.patch(url,data)
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
     // Log the request config for debugging
-    console.log('Request Config:', config);
     return config;
 }, function (error) {
     // Do something with request error

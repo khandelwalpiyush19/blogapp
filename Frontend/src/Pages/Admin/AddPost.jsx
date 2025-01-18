@@ -6,7 +6,6 @@ export default function AddPost() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
-  console.log('image',image)
 
   const handleSumbit = async (e) => {
     e.preventDefault();
@@ -20,7 +19,6 @@ export default function AddPost() {
       
   
       formData.forEach((value, key) => {
-        console.log(`${key}: ${value}`);
       });
       
       const response = await post('/blog/create', formData);
@@ -31,7 +29,6 @@ export default function AddPost() {
         setImage(null)
         setDescription('')
       }
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
