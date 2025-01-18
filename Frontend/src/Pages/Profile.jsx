@@ -42,7 +42,6 @@ setName(user.FullName)
     try {
         const resposne= await patch(`auth/profile/${userId}`,formData)
         const data=resposne.data
-        console.log(data)
         if (resposne.status==200) {
             toast.success(data.message)
             dispatch(setUser(data.user));

@@ -18,7 +18,6 @@ export default function Blog() {
         const request = await get(`/public/Singlepost/${postId}`);
         const response = request.data;
         setSinglePost(response.Post);
-        console.log(response);
       } catch (error) {
         console.log(error);
       }
@@ -38,7 +37,6 @@ export default function Blog() {
           userId: user._id,
         });
         const response = request.data;
-        console.log(response);
         setLoaddata((prevState) => !prevState); // Toggle loaddata
         if (response.success) {
           // alert(response.message);

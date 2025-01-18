@@ -7,7 +7,7 @@ const Create = async (req, res) => {
         const { title, desc } = req.body;
 
         // Check if a file was uploaded
-        console.log(req.file); // Debug: Log the file info
+       
         if (!req.file) {
             return res.status(400).json({ success: false, message: 'Image file is required' });
         }

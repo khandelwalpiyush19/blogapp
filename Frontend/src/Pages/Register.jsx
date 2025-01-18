@@ -39,12 +39,10 @@ export default function Register() {
       });
       const data = response.data;
       if (data.success) {
-        console.log(data.message)
         navigate('/login')
         toast.success(data.message)
 
        }
-      console.log('register api', data);
     } catch (error) {
       console.log(error);
       console.error("login error", error);

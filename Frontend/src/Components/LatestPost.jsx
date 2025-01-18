@@ -17,7 +17,6 @@ export default function LatestPost() {
                 const request = await get('/blog/GetPosts');
                 const response = request.data;
                 setBlogs(response.posts);
-                console.log('blogs', response);
             } catch (error) {
                 console.log(error);
             }

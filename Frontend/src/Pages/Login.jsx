@@ -25,7 +25,6 @@ export default function Login() {
         try {
             const request = await post('/auth/login', value);
             const response = request.data;
-            console.log("login success", response);
            if (request.status==200) {
             dispatch(setUser(response.user));
             navigate('/')

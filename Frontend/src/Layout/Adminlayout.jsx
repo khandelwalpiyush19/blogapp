@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux'
 export default function Adminlayout() {
   const navigate=useNavigate()
   const user=useSelector((state)=>state.auth.user)
-  console.log('user from reduxt',user)
 
   useEffect(()=>{
 

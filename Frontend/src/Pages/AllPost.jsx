@@ -39,7 +39,6 @@ export default function AllPost() {
 
   const handleUpdate = (postId) => {
     // Implement the update functionality here
-    console.log(`Post with ID ${postId} updated.`);
   };
 
   useEffect(()=>{
@@ -48,7 +47,6 @@ export default function AllPost() {
           const resposne= await get("/blog/GetPosts")
           const data= resposne.data
          setPosts(data.posts)
-          console.log(data)
       } catch (error) {
         console.log(error)
       }

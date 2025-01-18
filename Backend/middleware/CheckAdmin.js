@@ -14,11 +14,10 @@ const isAdmin = async (req, res, next) => {
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         
-        console.log('Decoded token:', decoded); // Log decoded token payload
+        
 
         const user = await UserModal.findById(decoded.userId);
-        console.log('User:', user); // Log user object retrieved from the database
-
+        
         if (!user) {
             return res.status(403).json({ message: 'Unauthorized: User not found' });
         }
@@ -45,10 +44,9 @@ const isLogin = async (req, res, next) => {
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         
-        console.log('Decoded token:', decoded); // Log decoded token payload
-
+       
         const user = await UserModal.findById(decoded.userId);
-        console.log('User:', user);
+       
 
         if (!user) {
             return res.status(403).json({ message: 'Unauthorized: User not found' });
