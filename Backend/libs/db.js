@@ -9,5 +9,4 @@ const DBCon=async()=>{
         console.log(error)
     }
 }
-
 export default DBCon
