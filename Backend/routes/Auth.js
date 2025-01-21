@@ -12,3 +12,12 @@ AuthRoutes.post('/login',Login)
 AuthRoutes.patch('/profile/:id',upload.single('profile'),isLogin,updateProfile)
 AuthRoutes.post('/logout',Logout)
 export default AuthRoutes
+
+
+
+
+
+
+
+
+
